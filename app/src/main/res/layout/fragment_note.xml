@@ -1,0 +1,182 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginStart="16dp"
+        android:text="Title:"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/editText_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="16dp"
+        android:text="Date:"
+        android:textSize="19sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_date"
+        app:layout_constraintEnd_toStartOf="@+id/editText_date"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:text="Content:"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+    <EditText
+        android:id="@+id/editText_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/edittext_border"
+        android:drawableLeft="@drawable/ic_create_black_24dp"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
+        android:text="Enter Your Title"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="6dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_content" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_save" />
+
+    <EditText
+        android:id="@+id/editText_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edittext_border"
+        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:inputType="date"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/editText_title" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="My Note"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/editText_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="32dp"
+        android:text="Date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_cancel"
+        app:layout_constraintEnd_toStartOf="@+id/button_cancel"
+        app:layout_constraintStart_toStartOf="@+id/editText_content" />
+
+    <CheckBox
+        android:id="@+id/checkBox_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="isAlarm?"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <view xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/editText_content"
+        class="com.example.vietvan.mynotebook.LineEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="13"
+        android:maxWidth="25dp"
+        android:minLines="10"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textColorLink="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/button_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+<!--<EditText-->
+        <!--android:id="@+id/editText_content"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@drawable/edittext_border"-->
+        <!--android:ems="10"-->
+        <!--android:gravity="top"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:textColor="#000"-->
+        <!--android:textColorLink="@android:color/background_light"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/button_cancel"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+
+</android.support.constraint.ConstraintLayout>
